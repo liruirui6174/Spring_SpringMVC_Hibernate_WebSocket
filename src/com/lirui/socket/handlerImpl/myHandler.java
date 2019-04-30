@@ -32,6 +32,6 @@ public class myHandler extends ChatWebSocketHandler {
 	    	   e.printStackTrace();
 	       }
 	      
-	        session.sendMessage(message);
+	        session.sendMessage(new TextMessage(is.getTest().getProperty_A()));
 	    }
 }
