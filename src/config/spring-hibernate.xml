@@ -13,12 +13,11 @@
    <bean id = "dataSource" class = "org.springframework.jdbc.datasource.DriverManagerDataSource">
   <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/ssh?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"></property>
+			value="jdbc:mysql://localhost:3306/testdb?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="123456"></property>
 	</bean>
-	<!-- 2.SessionFactory 配置 a.配置SessionFactory时,需要用到 dataSource 的配置信息.例：ref="dataSource",使用上面配置的 
-		dataSource. b.需要用到 hibernate方言 配置. c.需要找到实体 -->
+	
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
